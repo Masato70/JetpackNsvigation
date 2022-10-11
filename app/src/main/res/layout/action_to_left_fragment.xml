@@ -3,13 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ActionToRightFragment">
+    tools:context=".ActionToLeftFragment">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:textSize="40sp"
-        android:text="いいい" />
+        android:text="@string/hello_blank_fragment" />
 
 </FrameLayout>
-
