@@ -1,6 +1,5 @@
 package com.example.jetpacknsvigation
 
-import android.content.ContentValues
 import android.content.ContentValues.TAG
 import android.os.Bundle
 import android.util.Log
@@ -26,15 +25,6 @@ class HomeScreenFragment : Fragment() {
 
         val rightOptions = navOptions {
             anim {
-                enter = R.anim.slide_in_right
-                exit = R.anim.slide_out_left
-                popEnter = R.anim.slide_in_left
-                popExit = R.anim.slide_out_right
-            }
-        }
-
-        val leftOptions = navOptions {
-            anim {
                 enter = R.anim.slide_in_left
                 exit = R.anim.slide_out_right
                 popEnter = R.anim.slide_in_right
@@ -42,18 +32,25 @@ class HomeScreenFragment : Fragment() {
             }
         }
 
-        view.findViewById<Button>(R.id.action_right).setOnClickListener {
+        val leftOptions = navOptions {
+            anim {
+                enter = R.anim.slide_in_right
+                exit = R.anim.slide_out_left
+                popEnter = R.anim.slide_in_left
+                popExit = R.anim.slide_out_right
+            }
+        }
+
+        view.findViewById<Button>(R.id.action_right)?.setOnClickListener {
             Log.d(TAG, "アニメーション右")
-            findNavController().navigate(R.id.actionToRightFragment2, null, rightOptions)
+            findNavController().navigate(R.id.actionToRightFragment, null, rightOptions)
         }
 
         view.findViewById<Button>(R.id.action_left).setOnClickListener {
             Log.d(TAG, "アニメーション左")
-            findNavController().navigate(R.id.actionToLeftFragment2, null, rightOptions)
+            findNavController().navigate(R.id.actionToLeftFragment, null, leftOptions)
+
+//            findNavController().navigate(R.id.actionToLeftFragment, null, leftOptions)
         }
-
-
-
     }
-
 }

@@ -2,48 +2,57 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    app:startDestination="@id/homeScreenFragment">
+    app:startDestination="@id/home_icon">
     <fragment
-        android:id="@+id/homeScreenFragment"
+        android:id="@+id/home_icon"
         android:name="com.example.jetpacknsvigation.HomeScreenFragment"
         android:label="home_screen"
         tools:layout="@layout/home_screen_fragment">
 
-        <fragment
-            android:id="@+id/actionToLeftFragment"
-            android:name="com.example.jetpacknsvigation.ActionToLeftFragment"
-            android:label="action_to_left_fragment"
-            tools:layout="@layout/action_to_left_fragment" />
-        <fragment
-            android:id="@+id/actionToRightFragment"
-            android:name="com.example.jetpacknsvigation.ActionToRightFragment"
-            android:label="action_to_right_fragment"
-            tools:layout="@layout/action_to_right_fragment" />
         <action
-            android:id="@+id/action_homeScreenFragment_to_actionToRightFragment22"
-            app:destination="@id/actionToRightFragment2"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right" />
+            android:id="@+id/action_homeScreenFragment_to_actionToRightFragment"
+            app:destination="@id/actionToRightFragment" />
         <action
-            android:id="@+id/action_homeScreenFragment_to_actionToLeftFragment22"
-            app:destination="@id/actionToLeftFragment2"
-            app:enterAnim="@anim/slide_in_left"
-            app:exitAnim="@anim/slide_out_right"
-            app:popEnterAnim="@anim/slide_in_right"
-            app:popExitAnim="@anim/slide_out_left" />
+            android:id="@+id/action_homeScreenFragment_to_actionToLeftFragment"
+            app:destination="@id/actionToLeftFragment" />
 
     </fragment>
+
     <fragment
-        android:id="@+id/actionToLeftFragment2"
-        android:name="com.example.jetpacknsvigation.ActionToLeftFragment"
-        android:label="action_to_left_fragment"
-        tools:layout="@layout/action_to_left_fragment" />
+        android:id="@+id/celebration_icon"
+        android:name="com.example.jetpacknsvigation.CelebrationScreenFragment"
+        android:label="fragment_celebration_screen"
+        tools:layout="@layout/fragment_celebration_screen" />
+
+
     <fragment
-        android:id="@+id/actionToRightFragment2"
+        android:id="@+id/actionToRightFragment"
         android:name="com.example.jetpacknsvigation.ActionToRightFragment"
         android:label="action_to_right_fragment"
-        tools:layout="@layout/action_to_right_fragment" />
+        tools:layout="@layout/action_to_right_fragment"/>
+
+    <fragment
+        android:id="@+id/actionToLeftFragment"
+        android:name="com.example.jetpacknsvigation.ActionToLeftFragment"
+        android:label="action_to_left_fragment"
+        tools:layout="@layout/action_to_left_fragment" >
+        <action
+            android:id="@+id/action_actionToLeftFragment_to_getArgsFragment"
+            app:destination="@id/getArgsFragment"/>
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/getArgsFragment"
+        android:name="com.example.jetpacknsvigation.GetArgsFragment"
+        android:label="get_args_fragment"
+        tools:layout="@layout/get_args_fragment">
+
+        <argument
+            android:name="myArg"
+            app:argType="string" />
+
+    </fragment>
+
 
 </navigation>
