@@ -7,6 +7,15 @@
     tools:context=".MainActivity"
     android:orientation="vertical">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/Toolbar"
+        android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar"
+        android:background="@color/purple_500"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainerView"
         android:name="androidx.navigation.fragment.NavHostFragment"

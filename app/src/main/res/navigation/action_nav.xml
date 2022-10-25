@@ -6,7 +6,7 @@
     <fragment
         android:id="@+id/home_icon"
         android:name="com.example.jetpacknsvigation.HomeScreenFragment"
-        android:label="home_screen"
+        android:label="ホーム"
         tools:layout="@layout/home_screen_fragment">
 
         <action
@@ -21,20 +21,20 @@
     <fragment
         android:id="@+id/celebration_icon"
         android:name="com.example.jetpacknsvigation.CelebrationScreenFragment"
-        android:label="fragment_celebration_screen"
+        android:label="お祝い"
         tools:layout="@layout/fragment_celebration_screen" />
 
 
     <fragment
         android:id="@+id/actionToRightFragment"
         android:name="com.example.jetpacknsvigation.ActionToRightFragment"
-        android:label="action_to_right_fragment"
+        android:label="ホーム"
         tools:layout="@layout/action_to_right_fragment"/>
 
     <fragment
         android:id="@+id/actionToLeftFragment"
         android:name="com.example.jetpacknsvigation.ActionToLeftFragment"
-        android:label="action_to_left_fragment"
+        android:label="ホーム"
         tools:layout="@layout/action_to_left_fragment" >
         <action
             android:id="@+id/action_actionToLeftFragment_to_getArgsFragment"
@@ -45,7 +45,7 @@
     <fragment
         android:id="@+id/getArgsFragment"
         android:name="com.example.jetpacknsvigation.GetArgsFragment"
-        android:label="get_args_fragment"
+        android:label="ホーム"
         tools:layout="@layout/get_args_fragment">
 
         <argument
